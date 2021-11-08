@@ -16,9 +16,9 @@ resource "azurerm_subnet" "DMZ1_subnet"  {
     resource_group_name  = azurerm_resource_group.rg.name
     virtual_network_name = azurerm_virtual_network.vnet.name
     address_prefix = "10.99.11.0/24"
-    lifecycle { 
-     ignore_changes = [route_table_id]
-     }
+#    lifecycle { 
+#     ignore_changes = [route_table_id]
+#     }
   }
 
 resource "azurerm_subnet_route_table_association" "DMZ1_Subnet_Assoc" {
@@ -31,9 +31,9 @@ resource "azurerm_subnet" "DMZ2_subnet"  {
     resource_group_name  = azurerm_resource_group.rg.name
     virtual_network_name = azurerm_virtual_network.vnet.name
     address_prefix = "10.99.12.0/24"
-    lifecycle { 
-     ignore_changes = [route_table_id]
-    }
+#    lifecycle { 
+#     ignore_changes = [route_table_id]
+#    }
   }
 
 resource "azurerm_subnet_route_table_association" "DMZ2_Subnet_Assoc" {
