@@ -1,3 +1,16 @@
+terraform {
+  required_version = ">= 0.14.3"
+  required_providers {
+    azurerm = {
+      source  = "hashicorp/azurerm"
+      version = "~> 2.26.0"
+    }
+    random = {
+      version = "~> 2.2.1"
+    }
+  }
+}
+
 resource "azurerm_virtual_machine_scale_set" "chkpscaleset" {
   name                = "chkpscaleset-1"
   location            = azurerm_resource_group.rg.location
